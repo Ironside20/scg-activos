@@ -1,0 +1,80 @@
+
+#top {
+    position: relative;
+    background-color: seagreen;
+    background-image: url(../img/silver.jpg);
+    color: #D20005;
+    padding: 10px;
+    margin: 0px 0px 10px 0px;
+}
+
+#bottom {
+    position: relative;
+    background-color: #045491;
+    padding: 5px;
+    margin: 10px 0px 0px 0px;
+}
+
+#left {
+    float: left;
+    background-color: #ece3a5;
+    background-image: url(../img/silver.jpg);
+    padding: 5px;
+    width: 150px;
+}
+
+#right {
+    float: right;
+    background-color: #ece3a5;
+    padding: 5px;
+    width: 150px;
+}
+
+.center_content {
+    position: relative;
+    background-color: #dddddd;
+    font-family: "Times New Roman", Times, serif;
+    color: #000000;
+    padding: 10px;
+}
+
+.left_content {
+    background-color: #dddddd;
+    padding: 5px;
+    margin-left: 170px;
+}
+
+.right_content {
+    background-color: #dddddd;
+    padding: 5px;
+    margin: 0px 170px 0px 170px;
+}
+
+#top a:link, #top a:visited {
+  color: white;
+  font-weight : inherit;
+  text-decoration: none;
+}
+
+#top a:link:hover, #top a:visited:hover  {
+  color: black;
+  font-weight : bold;
+  text-decoration : underline;
+}
+
+body{
+    background: url("../img/coding.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-size: 10px;
+    font-weight: 50;
+    margin: 0;
+    color: cadetblue;
+}
+
+.p1{
+    font-family: "Times New Roman", Times, serif;
+    color: #000000;
+}
+
+
+

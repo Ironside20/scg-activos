@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:body>
+
+        <ui:composition template="./../template/plantilla.xhtml">
+
+            <ui:define name="top">
+                <h1 style="color: #045491">Soluto Consulting Group</h1>
+                <style> h1{text-align: center;}</style>
+            </ui:define>
+
+            <ui:define name="left">
+                <h:form>
+                    <p:growl>
+                        <p:autoUpdate />
+                    </p:growl>
+
+                    <p:panelMenu style="width:150px">
+                        <p:submenu label="Navigacion" >
+                            <p:menuitem value="Inicio" action="inicio.xhtml"/>
+                            <p:menuitem value="Registro Activos" action="reg_activos.xhtml"/>
+                            <p:menuitem value="Listado de Activos" action="list_activos.xhtml"/>
+                        </p:submenu>
+                    </p:panelMenu>
+                </h:form>
+            </ui:define>
+
+            <ui:define name="content">
+                <p:panel>
+                    <h:form id="registro">
+                        <div align="center">
+                            <h1 style="color: #000000">Registro de Activos</h1>
+                            <h:panelGrid  columns="2" border="1" id="panel">
+
+                                <h:outputLabel value="Ingrese Codigo" for="txtcode"/>
+                                <p:inputText id="txtcode" value="#{controllerActivos.activos.codigo}"/>
+
+                                <h:outputLabel value="Descripcion" for="txtdescripcion"/>
+                                <p:inputText id="txtdescripcion" value="#{controllerActivos.activos.descripcion}"/>
+
+                                <h:outputLabel value="Categoria" for="txtcate"/>
+                                <p:inputText id="txtcate" value="#{controllerActivos.activos.categoria}"/>
+
+                                <h:outputLabel value="Precio" for="txtprecio"/>
+                                <p:inputText id="txtprecio" value="#{controllerActivos.activos.precio}"/>
+
+                                <h:outputLabel value="Stock" for="txtstock"/>
+                                <p:inputText id="txtstock" value="#{controllerActivos.activos.stock}"/>
+
+                                <h:outputLabel value="Fecha" for="dateFecha"/>
+                                <p:calendar id="dateFecha" value="#{controllerActivos.activos.fechaEntrada}"/>
+
+                                <h:outputLabel value="Estado" for="txtestado"/>
+                                <p:inputText id="txtestado" value="#{controllerActivos.activos.estado}"/>
+
+                                <br/>
+
+                                <p:commandButton value="Guardar Activos" actionListener="#{controllerActivos.registrarActivos()}" update="registro"/>
+
+
+                            </h:panelGrid>
+                        </div>
+                    </h:form>
+
+                </p:panel>          
+            </ui:define>
+
+        </ui:composition>
+    </h:body>
+
+
+</html>
+

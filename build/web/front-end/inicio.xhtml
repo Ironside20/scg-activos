@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    
+    <h:body>
+          <ui:composition template="./../template/plantilla.xhtml">
+
+            <ui:define name="top">
+                <h1 style="color: #045491">Soluto Consulting Group</h1>
+               <style> h1{text-align: center;}</style>
+            </ui:define>
+
+            <ui:define name="left">
+                <h:form>
+                    <p:growl>
+                        <p:autoUpdate />
+                    </p:growl>
+
+                    <p:panelMenu style="width:150px">
+                       <p:submenu label="Navigacion" >
+                            <p:menuitem value="Registro Activos" action="reg_activos.xhtml"/>
+                            <p:menuitem value="Listado de Activos" action="list_activos.xhtml"/>
+                        </p:submenu>
+                    </p:panelMenu>
+                </h:form>
+            </ui:define>
+
+            <ui:define name="content">
+                <h1 style="color: #000000">¿Quienes Somos?</h1>
+                <p>Somos una empresa líder en asesoría empresarial integral, te ofrecemos soluciones eficientes y eficaces a sus necesidades o requerimientos, así logramos brindarle seguridad al empresario y/o emprendimiento. </p>
+               
+            </ui:define>
+
+        </ui:composition>
+    </h:body>
+</html>
+

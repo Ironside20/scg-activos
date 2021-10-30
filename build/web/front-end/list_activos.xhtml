@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+   <h:body>
+
+        <ui:composition template="./../template/plantilla.xhtml">
+
+            <ui:define name="top">
+               <h1 style="color: #045491">Soluto Consulting Group</h1>
+                <style> h1{text-align: center;}</style>
+            </ui:define>
+
+            <ui:define name="left">
+                <h:form>
+                    <p:growl>
+                        <p:autoUpdate />
+                    </p:growl>
+
+                    <p:panelMenu style="width:150px">
+                        <p:submenu label="Navigacion" >
+                            <p:menuitem value="Inicio" action="inicio.xhtml"/>
+                            <p:menuitem value="Registro Activos" action="reg_activos.xhtml"/>
+                            <p:menuitem value="Listado de Activos" action="list_activos.xhtml"/>
+                        </p:submenu>
+                    </p:panelMenu>
+                </h:form>
+            </ui:define>
+
+            <ui:define name="content">
+
+                <h:form id="listado">
+                    <h1 style="color: #000000">Listado de Activos Guardados</h1>
+                    <p:dataTable value="#{controllerActivos.listaActivos}" var="list">
+
+                        <p:column headerText="Codigo">
+                            <h:outputText value="#{list.codigo}"></h:outputText>
+                        </p:column>
+
+                        <p:column headerText="Descripcion">
+                            <h:outputText value="#{list.descripcion}"></h:outputText>
+                        </p:column>
+
+                        <p:column headerText="Categoria">
+                            <h:outputText value="#{list.categoria}"></h:outputText>
+                        </p:column>
+
+                        <p:column headerText="Precio">
+                            <h:outputText value="#{list.precio}"></h:outputText>
+                        </p:column>
+
+                        <p:column headerText="Cantidad">
+                            <h:outputText value="#{list.stock}"></h:outputText>
+                        </p:column>
+
+                        <p:column headerText="Fecha de Adquisición">
+                            <h:outputText value="#{list.fechaEntrada}"></h:outputText>
+                        </p:column>
+
+                        <p:column headerText="Estado del Producto">
+                            <h:outputText value="#{list.estado}"></h:outputText>
+                        </p:column>
+
+                    </p:dataTable>
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+    </h:body>
+</html>
+
